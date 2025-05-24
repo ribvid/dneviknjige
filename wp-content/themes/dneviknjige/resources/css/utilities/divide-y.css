@@ -1,0 +1,3 @@
+.divide-y > * + * {
+  border-block-start: var(--stroke);
+}

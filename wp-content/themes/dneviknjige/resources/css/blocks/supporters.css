@@ -1,0 +1,11 @@
+.supporters {
+  border-top: 1px solid var(--color-gray);
+  padding-block-start: var(--space-m-l);
+
+  --cluster-column-gap: var(--space-s-m);
+}
+
+.supporters img {
+  height: 4rem;
+  width: auto;
+}

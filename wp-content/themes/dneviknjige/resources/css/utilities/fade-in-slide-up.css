@@ -1,0 +1,33 @@
+.fade-in-slide-up {
+  opacity: 0;
+  animation-name: fadeIn, slideUp;
+  animation-duration: 700ms, 900ms;
+  animation-delay: 200ms, 0ms;
+  animation-timing-function: linear, cubic-bezier(0.65, 0, 0.35, 1);
+  animation-iteration-count: 1, 1;
+  animation-fill-mode: forwards;
+}
+
+.fade-in-slide-up[data-speed="slow"] {
+  animation-duration: 1500ms, 2s;
+  animation-delay: 300ms, 0ms;
+  --slide-distance: 30px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(var(--slide-distance, 20px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

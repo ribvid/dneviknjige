@@ -1,0 +1,86 @@
+{
+  "title": "Spacing",
+  "description": "Consistent spacing sizes, based on a ratio, with min and max sizes. This allows you to set spacing based on the context size. For example, min for mobile and max for desktop browsers.",
+  "items": [
+    {
+      "name": "3XS",
+      "min": 4,
+      "max": 5
+    },
+    {
+      "name": "2XS",
+      "min": 8,
+      "max": 9
+    },
+    {
+      "name": "XS",
+      "min": 11,
+      "max": 13
+    },
+    {
+      "name": "S",
+      "min": 15,
+      "max": 17
+    },
+    {
+      "name": "M",
+      "min": 23,
+      "max": 26
+    },
+    {
+      "name": "L",
+      "min": 30,
+      "max": 45
+    },
+    {
+      "name": "XL",
+      "min": 45,
+      "max": 51
+    },
+    {
+      "name": "2XL",
+      "min": 60,
+      "max": 68
+    },
+    {
+      "name": "3XL",
+      "min": 90,
+      "max": 102
+    },
+    {
+      "name": "2XS - M",
+      "min": 8,
+      "max": 26
+    },
+    {
+      "name": "S - M",
+      "min": 15,
+      "max": 26
+    },
+    {
+      "name": "M - L",
+      "min": 23,
+      "max": 45
+    },
+    {
+      "name": "L - XL",
+      "min": 30,
+      "max": 51
+    },
+    {
+      "name": "L - 2XL",
+      "min": 30,
+      "max": 68
+    },
+    {
+      "name": "XL - 2XL",
+      "min": 45,
+      "max": 68
+    },
+    {
+      "name": "XL - 3XL",
+      "min": 45,
+      "max": 102
+    }
+  ]
+}

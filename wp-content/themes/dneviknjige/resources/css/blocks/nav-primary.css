@@ -1,0 +1,19 @@
+.nav-primary {
+  --cluster-column-gap: var(--space-2xs);
+  font-family: var(--font-sans);
+}
+
+.nav-primary > ul li a {
+  border-radius: var(--radius-m);
+  padding: var(--space-2xs);
+  background-color: var(--nav-item-bg-color, transparent);
+  text-decoration: none;
+  font-size: var(--size-step-00);
+  font-weight: var(--font-medium);
+  color: var(--nav-item-text-color, inherit);
+}
+
+.nav-primary > ul li a:is(:hover, [aria-current="page"]) {
+  --nav-item-bg-color: var(--nav-item-active-bg-color, var(--color-light-gray));
+  --nav-item-text-color: var(--nav-item-active-text-color, inherit);
+}

@@ -1,0 +1,7 @@
+.funders {
+  --cluster-horizontal-alignment: center;
+}
+
+.funders :is(img, svg) {
+  height: 2.8rem;
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Tracking",
+  "description": "Helper classes and custom properties for common letter spacing values",
+  "items": [
+    {
+      "name": "Normal",
+      "value": "0em"
+    },
+    {
+      "name": "Wide",
+      "value": "0.05em"
+    }
+  ]
+}

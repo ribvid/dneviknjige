@@ -1,0 +1,82 @@
+.button {
+
+  /* Configuration */
+  --button-x-padding: 1.6em;
+  --button-y-padding: 0.8em;
+  --button-gutter: 0.8ch;
+  --button-bg: transparent;
+  --button-color: var(--color-green);
+  --button-border-width: 1px;
+  --button-border-style: solid;
+  --button-border-color: var(--color-green);
+  --button-hover-bg: var(--color-green);
+  --button-hover-color: var(--color-white);
+  --button-hover-border-color: var(--color-green);
+  --button-radius: var(--radius-m);
+  --button-font-family: var(--font-sans);
+
+  /* Layout and spacing */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gutter);
+  padding: var(--button-y-padding) var(--button-x-padding);
+
+  /* Colors */
+  background: var(--button-bg);
+  color: var(--button-color);
+
+  /* Stroke and radius */
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-radius);
+
+  /* Typography */
+  text-decoration: none;
+  font-weight: var(--button-font-weight, var(--font-medium));
+  font-size: var(--button-font-size, var(--size-step-00));
+  letter-spacing: var(--button-letter-spacing);
+  font-family: var(--button-font-family);
+  line-height: var(--button-line-height, 1.1); /* If you don’t set this, <a> buttons and <button> buttons will be different heights because they usually have different line heights from user agent styles. I chose 1.1 because text won’t overlap with our chosen font if it wraps on to multiple lines. */
+
+  /* Interactive */
+  cursor: pointer;
+}
+
+.button svg {
+  height: var(--button-icon-size, 2.8ex);
+  height: var(--button-icon-size, 1lh);
+  width: auto;
+  flex: none;
+}
+
+.button:hover {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border-color);
+  font-weight: var(--button-hover-font-weight, var(--button-font-weight, var(--font-medium)));
+  transform: scale(var(--button-hover-scale));
+}
+
+.button:focus {
+  outline-width: var(--button-outline-width, var(--button-border-width));
+  outline-style: var(--button-outline-style, var(--button-border-style));
+  outline-color: var(--button-outline-color, var(--button-border-color));
+  outline-offset: var(
+    --button-outline-offset,
+    calc(var(--button-border-width) * 2)
+  );
+}
+
+.button:active {
+  transform: scale(98%);
+}
+
+.button[hidden] {
+  display: none;
+}
+
+.button[data-button-variant="fill"] {
+  --button-bg: var(--color-green);
+  --button-color: var(--color-white);
+}

@@ -1,0 +1,97 @@
+{
+    "key": "group_6824f2c7eaed0",
+    "title": "Galerija slik",
+    "fields": [
+        {
+            "key": "field_6824f2c829644",
+            "label": "Galerija",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6824f2d529645",
+                    "label": "Položaj",
+                    "name": "position",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "end": "Na koncu besedila",
+                        "start": "Pod naslovom"
+                    },
+                    "default_value": "end",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "allow_in_bindings": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6824f2f529646",
+                    "label": "Slike",
+                    "name": "images",
+                    "aria-label": "",
+                    "type": "gallery",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min": "",
+                    "max": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "insert": "append",
+                    "preview_size": "medium"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1748031051
+}

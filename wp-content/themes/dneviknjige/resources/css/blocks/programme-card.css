@@ -1,0 +1,61 @@
+.programme-card {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-m-l);
+  padding-inline: var(--space-m);
+  height: 100%;
+  background-color: var(--card-background, var(--color-green));
+  color: var(--color-white);
+  border-radius: var(--radius-m);
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-dark);
+
+  --repel-wrap: nowrap;
+}
+
+.programme-card__heading {
+  font-weight: var(--font-medium);
+  font-size: var(--size-step-2);
+  line-height: var(--leading-tight);
+}
+
+.programme-card__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  height: 110%;
+  opacity: 0.05;
+  color: var(--color-white);
+}
+
+a.programme-card {
+  transition: transform 300ms ease;
+  text-decoration: none;
+}
+
+a.programme-card:hover {
+  transform: scale(1.05);
+}
+
+a.programme-card:active {
+  transform: scale(0.99);
+}
+
+.programme-card__meta {
+  font-size: var(--size-step-1);
+  font-weight: var(--font-regular);
+  opacity: 0.5;
+  line-height: var(--leading-flat);
+}
+
+.programme-card__arrow {
+  font-size: var(--size-step-5);
+  opacity: 0.2;
+  line-height: var(--leading-flat);
+  font-weight: var(--font-regular);
+}
+
+.programme-card[data-color-variant="terracotta"] {
+  --card-background: var(--color-terracotta);
+}

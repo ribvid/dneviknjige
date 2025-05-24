@@ -1,0 +1,13 @@
+.nav-other-projects {
+  --cluster-column-gap: var(--space-xs);
+}
+
+.nav-other-projects ul li {
+  display: inline-block;
+  line-height: 1;
+}
+
+.nav-other-projects svg {
+  height: clamp(1.625rem, 1.4308rem + 0.9709vw, 2.25rem);
+  width: auto;
+}

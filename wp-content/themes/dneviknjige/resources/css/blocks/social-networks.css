@@ -1,0 +1,14 @@
+.social-networks {
+  --gutter: var(--space-s);
+  margin-inline-start: auto;
+  inline-size: fit-content;
+}
+
+.social-networks svg {
+  height: 0.9rem;
+  fill: var(--color-dark-gray);
+}
+
+.social-networks a:hover svg {
+  fill: var(--color-black);
+}

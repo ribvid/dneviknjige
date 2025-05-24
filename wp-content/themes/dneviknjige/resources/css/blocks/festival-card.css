@@ -1,0 +1,43 @@
+.festival-card {
+  overflow: hidden;
+  padding-block-end: var(--space-s);
+  height: 100%;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-m);
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-dark);
+
+  --flow-space: var(--space-xs);
+}
+
+.festival-card__heading {
+  font-weight: var(--font-medium);
+  font-size: var(--size-step-2);
+  line-height: var(--leading-tight);
+  padding-inline: var(--space-m);
+  text-align: center;
+  color: inherit;
+}
+
+a.festival-card {
+  transition: transform 300ms ease;
+  text-decoration: none;
+}
+
+a.festival-card:hover {
+  transform: scale(1.05);
+}
+
+a.festival-card:active {
+  transform: scale(0.99);
+}
+
+.festival-card figure {
+  background-color: var(--color-white);
+}
+
+.festival-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}

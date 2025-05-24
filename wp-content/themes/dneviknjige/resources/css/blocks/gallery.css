@@ -1,0 +1,24 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gallery > img {
+  transition: opacity 1.2s ease-in-out;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.gallery > img:not(:first-child) {
+  opacity: 0;
+}
+
+.gallery img[data-animate="fadeIn"] {
+  opacity: 1;
+}
+
+.gallery img[data-animate="fadeOut"] {
+  opacity: 0;
+}

@@ -1,0 +1,30 @@
+@import '@midzer/tobii/dist/tobii.min.css';
+
+body {
+  --tobii-slide-max-height: 80vh;
+  --tobii-slide-max-width: 80vw;
+  --focus-color: var(--color-black);
+}
+
+.lightbox-gallery img {
+  block-size: 10rem;
+  inline-size: 13rem;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
+.tobii__btn--close {
+  --close-btn-offset: 1.5em;
+  right: var(--close-btn-offset);
+  top: var(--close-btn-offset);
+}
+
+body.admin-bar .tobii__btn--close {
+  top: calc(var(--close-btn-offset) + 32px);
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .tobii__btn--close {
+    top: calc(var(--close-btn-offset) + 46px);
+  }
+}

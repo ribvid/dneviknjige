@@ -1,0 +1,21 @@
+:root {
+  --gutter: var(--space-m-l);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 300ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 00.5, 0.2, 1.5);
+  --stroke: 1px solid var(--color-gray);
+  --stroke-solid: 1px solid var(--color-dark-gray);
+  --radius-s: 0.2rem;
+  --radius-m: 0.75rem;
+  --radius-l: 2.5rem;
+  --wrapper-max-width: 90rem;
+  --wrapper-x-padding: var(--space-m-l);
+  --burger-icon-color: var(--color-black);
+  --burger-icon-line-height: 2px;
+  --burger-icon-line-gap: 6px;
+  --burger-menu-font-size: var(--size-step-1);
+  --shadow-default: 0 0 8px 0 rgba(200, 200, 200, 0.2);
+  --shadow-dark: 0 0 8px 0 rgba(2000, 200, 200, 0.7);
+  --bg-body: var(--color-lighter-gray);
+}

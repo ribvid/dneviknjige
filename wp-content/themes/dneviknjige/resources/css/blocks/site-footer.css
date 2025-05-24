@@ -1,0 +1,13 @@
+.site-footer {
+  margin-block-start: var(--space-l-2xl);
+  padding-block-start: var(--space-xl-2xl);
+  padding-block-end: var(--space-m-l);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.site-footer__logo {
+  margin-inline: auto;
+  max-height: 116px;
+  max-width: min(100%, 700px);
+}
