@@ -7,17 +7,20 @@
 @section('content')
   @while(have_posts())
     @php the_post() @endphp
-    <div class="wrapper flow flow-space-xl-2xl py-s-m fade-in-slide-up" data-speed="slow">
-      @if ($active_festival = get_field('active_festival', 'options'))
-        {!! wp_get_attachment_image(get_field('cover', $active_festival), 'full', false, ['class' => 'homepage-cover']) !!}
-      @else
-        <div class="wrapper prose flow">
-          <h1>Slovenski dnevi knjige</h1>
-          @php the_content() @endphp
-        </div>
-      @endif
+    @if ($active_festival = get_field('active_festival', 'options'))
+      <h1 class="sr-only">{{ __('Slovenski dnevi knjige', 'sage') }}</h1>
 
-      @include('partials.funders', ['color' => 'bw'])
-    </div>
+      <div class="flow | flow-space-xl-2xl py-m-l fade-in-slide-up" data-speed="slow">
+        <div class="wrapper">
+          {!! wp_get_attachment_image(get_field('cover', $active_festival), 'full', false, ['class' => 'homepage-cover']) !!}
+        </div>
+
+        @include('partials.homepage-intro', ['intro' => get_field('intro', $active_festival)])
+
+        <div class="wrapper flow">
+          @include('partials.funders', ['color' => 'bw'])
+        </div>
+      </div>
+    @endif
   @endwhile
 @endsection

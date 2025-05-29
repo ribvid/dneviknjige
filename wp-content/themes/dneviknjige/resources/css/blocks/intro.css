@@ -1,0 +1,17 @@
+.intro {
+  padding-block: var(--space-l-2xl);
+  background-color: var(--color-ivory);
+}
+
+.intro__author {
+  --cluster-column-gap: var(--space-s);
+  line-height: var(--leading-snug);
+}
+
+.intro__author img {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
