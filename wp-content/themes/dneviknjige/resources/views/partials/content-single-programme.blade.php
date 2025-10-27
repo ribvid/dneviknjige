@@ -43,38 +43,20 @@
 
   <div>
     <article>
-      <h1>
-        {!! $title !!}
-      </h1>
+      <header class="prose">
+        <h1>{!! $title !!}</h1>
+      </header>
 
       <div>
         @if (have_rows('events'))
           <div class="divide-y">
             @while (have_rows('events'))
               @php the_row() @endphp
-              <article class="flow py-l-2xl">
-                <header class="flow">
-                  <h2 class="text-green">{{ get_sub_field('heading') }}</h2>
-                  <p class="flow-space-2xs text-green font-sans font-medium text-step-1">{{ get_sub_field('time') }}</p>
-                </header>
-                <div class="prose flow" style="margin-left: 0;">
-                  {!! get_sub_field('description') !!}
-                </div>
-                @if ($gallery = get_sub_field('gallery'))
-                  <ul class="lightbox-gallery cluster" role="list">
-                    @foreach ($gallery as $image_id)
-                      <li>
-                        <a href="{{ wp_get_attachment_url($image_id) }}"
-                           class="lightbox"
-                           data-element="lightbox"
-                           data-group="post-{{ $post_id }}-{{ get_row_index() }}">
-                          {!! wp_get_attachment_image($image_id, 'medium', false, ['data-caption' => wp_get_attachment_caption($image_id)]) !!}
-                        </a>
-                      </li>
-                    @endforeach
-                  </ul>
-                @endif
-              </article>
+              <x-event :gallery="get_sub_field('gallery')">
+                <x-slot:heading>{{ get_sub_field('heading') }}</x-slot:heading>
+                <x-slot:subheading>{{ get_sub_field('time') }}</x-slot:subheading>
+                <x-slot:description>{!! get_sub_field('description') !!}</x-slot:description>
+              </x-event>
             @endwhile
 
             @if ($note = get_field('note'))
