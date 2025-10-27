@@ -18,7 +18,9 @@
       'posts_per_page' => -1,
       'meta_query' => [
         ['key' => 'festival', 'value' => $festivalId, 'compare' => '=']
-      ]
+      ],
+      'orderby' => 'title',
+      'order' => 'ASC',
     ]);
   @endphp
 
