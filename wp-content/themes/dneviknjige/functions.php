@@ -704,7 +704,7 @@ add_action( 'pre_get_posts', function ( $query ) {
     }
 } );
 
-/** Remove active festival from the "Festival" archive */
+/** Filter out active festivals and sort the remaining ones by title */
 add_action( 'pre_get_posts', function ( $query ) {
     if ( is_admin() || ! $query->is_main_query() ) {
         return;
@@ -719,6 +719,9 @@ add_action( 'pre_get_posts', function ( $query ) {
     if ( $active_festival ) {
         $query->set( 'post__not_in', [ $active_festival ] );
     }
+
+    $query->set('orderby', 'title');
+    $query->set('order', 'DESC');
 } );
 
 // Allow svg and path tags in acf fields
