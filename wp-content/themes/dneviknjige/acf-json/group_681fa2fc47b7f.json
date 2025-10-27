@@ -36,7 +36,15 @@
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ff54549201b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -155,6 +163,110 @@
                     "preview_size": "medium"
                 }
             ]
+        },
+        {
+            "key": "field_68ff54e4896cf",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<hr>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_68ff54549201b",
+            "label": "Program ni in ne bo objavljen",
+            "name": "programme_not_published",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Za arhivske festivale program ni in ne bo vnešen. Namesto tega bo prikazano statično besedilo in fotogalerija.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Da, gre za arhivski festival, za katerega program ne bo vnešen v uredniški sistem",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_68ff5526fba4f",
+            "label": "Nadomestno besedilo",
+            "name": "about",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "To besedilo bo prikazano namesto festivala.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ff54549201b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_68ff5544fba50",
+            "label": "Fotogalerija",
+            "name": "images",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Fotogalerija se bo prikazala pod nadomestnim besedilom v razmerju 16:9. Če slike ne bodo v tem razmerju, se bodo samodejno prilagodile – obdržale bodo enako višino, poravnane pa bodo na sredino.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ff54549201b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -175,5 +287,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748546518
+    "modified": 1761564516
 }

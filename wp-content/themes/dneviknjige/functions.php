@@ -758,3 +758,10 @@ add_filter( 'wp_nav_menu_objects', function ( $items, $args ) {
 
     return $items;
 }, 10, 2 );
+
+// Set the page <title> for the festivals
+add_filter('pre_get_document_title', function ($title) {
+    if (get_post_type() === 'festival') {
+        return "Festival " . get_the_title();
+    }
+});

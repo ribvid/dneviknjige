@@ -8,7 +8,8 @@
   grid-row-start: 1;
   grid-column-start: 1;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  object-fit: var(--gallery-object-fit, cover);
+  object-position: center;
 }
 
 .gallery > img:not(:first-child) {
@@ -21,4 +22,8 @@
 
 .gallery img[data-animate="fadeOut"] {
   opacity: 0;
+}
+
+.gallery[data-fit="contain"] {
+  --gallery-object-fit: contain;
 }
