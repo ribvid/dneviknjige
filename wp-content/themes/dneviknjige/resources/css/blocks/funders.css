@@ -4,4 +4,5 @@
 
 .funders :is(img, svg) {
   height: 2.8rem;
+  width: auto;
 }
