@@ -704,7 +704,7 @@ add_action( 'pre_get_posts', function ( $query ) {
     }
 } );
 
-/** Filter out active festivals and sort the remaining ones by title */
+/** Filter out active festivals, sort the remaining ones by title and show 9 festivals per page */
 add_action( 'pre_get_posts', function ( $query ) {
     if ( is_admin() || ! $query->is_main_query() ) {
         return;
@@ -722,6 +722,7 @@ add_action( 'pre_get_posts', function ( $query ) {
 
     $query->set('orderby', 'title');
     $query->set('order', 'DESC');
+    $query->set('posts_per_page', 9);
 } );
 
 // Allow svg and path tags in acf fields

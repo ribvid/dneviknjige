@@ -1,0 +1,25 @@
+.pagination {
+  --cluster-column-gap: var(--space-2xs);
+  --cluster-row-gap: var(--space-xs);
+  font-family: var(--font-sans);
+  color: var(--color-dark-gray);
+  font-size: var(--size-step-00);
+}
+
+.pagination > * {
+  border: var(--stroke);
+  border-radius: var(--radius-m);
+  padding: 0.5rem 1rem;
+}
+
+.pagination a {
+  color: var(--color-dark-gray);
+  text-decoration: none;
+}
+
+.pagination > .current,
+.pagination > a:hover {
+  border-color: var(--color-dark-gray);
+  color: var(--color-black);
+  background-color: var(--color-light-gray);
+}
