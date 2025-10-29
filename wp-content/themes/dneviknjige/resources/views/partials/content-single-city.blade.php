@@ -1,20 +1,19 @@
-@php $festival = get_field('festival') @endphp
-@php $is_active = $festival->ID === get_field('active_festival', 'options') @endphp
+@php
+  $festival = get_field('festival');
+  $is_active = $festival->ID === get_field('active_festival', 'options');
+@endphp
 
 <div class="wrapper mb-m" data-element="breadcrumbs">
   @if($is_active)
-    <a href="{{ get_post_type_archive_link('city') }}"
-       class="font-sans text-step-00 font-medium no-underline text-dark-gray">
+    <a href="{{ get_post_type_archive_link('city') }}" class="breadcrumb-link">
       {{ __('Partnerska mesta', 'sage') }}
     </a>
   @else
-    <a href="{{ get_post_type_archive_link('festival') }}"
-       class="font-sans text-step-00 font-medium no-underline text-dark-gray">
+    <a href="{{ get_post_type_archive_link('festival') }}" class="breadcrumb-link">
       {{ __('Arhiv', 'sage') }}
     </a>
     /
-    <a href="{{ get_permalink($festival) }}"
-       class="font-sans text-step-00 font-medium no-underline text-dark-gray">
+    <a href="{{ get_permalink($festival) }}" class="breadcrumb-link">
       {{ sprintf('%s %s', __('Program', 'sage'), $festival->post_title ) }}
     </a>
   @endif
@@ -33,7 +32,8 @@
             @php the_row() @endphp
             <x-event variant="city" :gallery="get_sub_field('gallery')">
               <x-slot:heading>{{ get_sub_field('heading') }}</x-slot:heading>
-              <x-slot:subheading>{{ get_sub_field('date') }} • {{ get_sub_field('location') }}</x-slot:subheading>
+              <x-slot:subheading>{{ get_sub_field('date') }}
+                • {{ get_sub_field('location') }}</x-slot:subheading>
               <x-slot:description>{!! get_sub_field('description') !!}</x-slot:description>
             </x-event>
           @endwhile
@@ -55,7 +55,9 @@
           @endif
         </div>
       @else
-        <p class="prose my-m">Program je v pripravi.</p>
+        <div class="prose my-m">
+          <p>{{ __('Program je v pripravi', 'sage') }}.</p>
+        </div>
       @endif
     </div>
   </article>

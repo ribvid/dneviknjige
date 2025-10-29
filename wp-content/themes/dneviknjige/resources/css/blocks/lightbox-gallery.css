@@ -6,11 +6,20 @@ body {
   --focus-color: var(--color-black);
 }
 
+.lightbox-gallery {
+  --gutter: var(--space-m);
+  --grid-min-item-size: clamp(9rem, calc(33% - var(--gutter) * 2), 18rem);
+}
+
 .lightbox-gallery img {
-  block-size: 10rem;
-  inline-size: 13rem;
+  inline-size: 100%;
+  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: var(--radius-m);
+}
+
+.lightbox-gallery a:has(img) {
+  display: block;
 }
 
 .tobii__btn--close {

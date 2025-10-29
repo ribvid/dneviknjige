@@ -1,0 +1,7 @@
+.breadcrumb-link {
+  font-family: var(--font-sans);
+  font-size: var(--size-step-00);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  color: var(--color-dark-gray);
+}

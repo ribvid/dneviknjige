@@ -1,6 +1,5 @@
 <div class="wrapper mb-m fade-in-slide-up" data-element="breadcrumbs">
-  <a href="{{ get_post_type_archive_link('festival') }}"
-     class="font-sans text-step-00 font-medium no-underline text-dark-gray">
+  <a href="{{ get_post_type_archive_link('festival') }}" class="breadcrumb-link">
     {{ __('Arhiv', 'sage') }}
   </a>
 </div>
