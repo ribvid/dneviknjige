@@ -32,5 +32,7 @@
         @endwhile
       </div>
     @endif
+
+    @include('partials.pagination')
   </div>
 @endsection
